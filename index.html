@@ -1,60 +1,468 @@
-
-
-  
-
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Transformação Digital</title>
-  
-  <body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformação Digital | Consultoria em BPM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variáveis de cores e estilos */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #333;
+            --background: #f9f9f9;
+            --gradient: linear-gradient(135deg, #3498db, #2c3e50);
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
 
-  
- 
- <h1 style="color:rgb(71, 126, 255);">Transformação Digital e Gerenciamento de Processos de Negócios</h1>
+        /* Reset e estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  </p class="center-align">A transformação digital  é uma jornada necessária em qualquer negócio. A Gestão de Processos de Negócios</p> (BPM) contribui para conquistar vantagem competitiva, otimizar processos e reduzir custos.</p> Adote agora um diferencial de mercado com a nossa solução!</p>
-  
-   
-  <h1 style="color:rgb(71, 126, 255);">Comece sua transformação digital com a gente </h1>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background-color: var(--background);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-  <div class="gallery">
-    <a target="_blank" href="Imagem 5.jpg">
-      <img src="Imagem 5.jpg" alt="estudo "width="400" height="500">
-    </a>
-    <div class="desc"><h3>Otimização dos processos </h3><p>Com a nossa consultoria em Transformação Digital e BPM, é possível ter maior controle e visibilidade dos processos, além de visualizar melhorias e identificar e eliminar gargalos.</p></div>
-  </div>
-  
-  <div class="gallery">
-    <a target="_blank" href="Imagem foto 1.jpg">
-      <img src="Imagem foto 1.jpg" alt="pc" width="400" height="500">
-    </a>
-    <div class="desc"><h3>Maior agilidade empresarial</h3><p>Ao ter visão ponta a ponta dos processos, sua empresa ganha agilidade e responde com mais rapidez às demandas do mercado.</p></div>
-</div>
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+        }
 
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
 
-<div class="gallery">
-      <a target=" href=" Imagem do robô.jpg" >
-        <img src="Imagem do robô.jpg" alt="estudo" width="600" height="500">
-      </a>
-      <div class="desc"><h3>Satifação do cliente</h3> <p>Quando a empresa tem processos mais eficientes, consegue atender melhor o cliente e oferecer um serviço de qualidade superior.</p></div>
-    </div>
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-    <div class="gallery">
-      <a target="_blank" href=Imagem desenho 2.jpg>
-        <img src="Imagem desenho 2.jpg" alt="estudo" width="600" height="500">
-      </a>
-      <div class="desc"><h3> Tomada de decisão baseada em dados</h3>
-       <b> <p>Nossa consultoria fornece dados claros e precisos para ajudar os gestores a tomarem decisões com mais assertividade.</p></b>
-      
-  
-       <h1>Como podemos ajudar sua empresa</h1>
-       <h2>Metodologia aderente</h2> 
-       <p>Elaboramos uma metodologia aderente ao seu negócio, garantindo que a implementação do </p><p>BPM seja realizada de maneira eficiente e com resultados valiosos para a sua empresa.</p>
-      
-         
+        .btn {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        /* Header estilizado */
+        header {
+            background: var(--gradient);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='0.1' d='M0,224L48,213.3C96,203,192,181,288,160C384,139,480,117,576,122.7C672,128,768,160,864,170.7C960,181,1056,171,1152,165.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Introdução estilizada */
+        .introduction {
+            padding: 5rem 0;
+            text-align: center;
+            background-color: white;
+        }
+
+        .introduction p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            color: var(--text);
+        }
+
+        .highlight {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+
+        /* Galeria sofisticada */
+        .gallery {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-img {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .gallery-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-img img {
+            transform: scale(1.1);
+        }
+
+        .gallery-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-img::after {
+            opacity: 1;
+        }
+
+        .gallery-content {
+            padding: 1.5rem;
+        }
+
+        .gallery-content h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .gallery-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Metodologia */
+        .methodology {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .methodology-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .methodology-content h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .methodology-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Footer estilizado */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .introduction p {
+                font-size: 1rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Transformação Digital e Gerenciamento de Processos de Negócios</h1>
+            <p>Potencialize sua empresa com soluções inteligentes e inovadoras</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="introduction">
+            <div class="container">
+                <p>
+                    A <span class="highlight">transformação digital</span> é uma jornada necessária em qualquer negócio. A Gestão de Processos de Negócios
+                    (BPM) contribui para conquistar vantagem competitiva, otimizar processos e reduzir custos.
+                </p>
+                <p>
+                    Adote agora um diferencial de mercado com a nossa solução!
+                </p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Comece sua transformação digital conosco</h2>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item fade-in delay-1">
+                        <div class="gallery-img">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Otimização de Processos">
+                        </div>
+                        <div class="gallery-content">
+                            <h3>Otimização dos Processos</h3>
+                            <p>
+                                Com a nossa consultoria em Transformação Digital e BPM, é possível ter maior controle e visibilidade dos
+                                processos, além de visualizar melhorias e identificar e eliminar gargalos.
+                            </p>
+                            <a href="#" class="btn">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item fade-in delay-2">
+                        <div class="gallery-img">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Agilidade Empresarial">
+                        </div>
+                        <div class="gallery-content">
+                            <h3>Maior Agilidade Empresarial</h3>
+                            <p>
+                                Ao ter visão ponta a ponta dos processos, sua empresa ganha agilidade e responde com mais rapidez às demandas
+                                do mercado.
+                            </p>
+                            <a href="#" class="btn">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item fade-in delay-3">
+                        <div class="gallery-img">
+                            <img src="https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Satisfação do Cliente">
+                        </div>
+                        <div class="gallery-content">
+                            <h3>Satisfação do Cliente</h3>
+                            <p>
+                                Quando a empresa tem processos mais eficientes, consegue atender melhor o cliente e oferecer um serviço de
+                                qualidade superior.
+                            </p>
+                            <a href="#" class="btn">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item fade-in delay-4">
+                        <div class="gallery-img">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Decisão Baseada em Dados">
+                        </div>
+                        <div class="gallery-content">
+                            <h3>Tomada de Decisão Baseada em Dados</h3>
+                            <p>
+                                Nossa consultoria fornece dados claros e precisos para ajudar os gestores a tomarem decisões com mais
+                                assertividade.
+                            </p>
+                            <a href="#" class="btn">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="methodology">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Como Podemos Ajudar Sua Empresa</h2>
+                </div>
+                <div class="methodology-content">
+                    <h3>Metodologia Aderente</h3>
+                    <p>
+                        Elaboramos uma metodologia aderente ao seu negócio, garantindo que a implementação do BPM seja realizada de
+                        maneira eficiente e com resultados valiosos para a sua empresa. Nossa abordagem combina as melhores práticas do
+                        mercado com as particularidades do seu segmento, assegurando uma transformação digital completa e duradoura.
+                    </p>
+                    <a href="#" class="btn">Entre em contato</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p>&copy; 2024 Transformação Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
+</html>
+
